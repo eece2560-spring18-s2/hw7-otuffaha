@@ -31,7 +31,6 @@ void Member::PathToMemberBFS(uint64_t dst_member_id) {
     for(auto it : m->connecting_members) {
       auto u = it.second;
       if(u.dst->member_id == dst_member_id) {
-        //  u->parent = m;
            PrintPath(u.dst);
         }
       if(u.dst->color == COLOR_WHITE) {
