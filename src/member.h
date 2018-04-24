@@ -29,7 +29,6 @@ class MemberConnection {
 };
 
 class Member {
-  // Add extra private fields and private methods if necessary.
 
  public:
   uint64_t member_id;
@@ -45,6 +44,7 @@ class Member {
   void PathToMemberIDDFS(uint64_t dst_member_id);
   void PrintPath(Member *dst);
   void DumpConnections();
+  Member *DLS(Member * node, int iteration, uint64_t dst_member_id);
 
   // For graph algorithms
   int color = COLOR_WHITE;
